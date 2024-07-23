@@ -2,8 +2,8 @@ public class FuncionesArraysEjercicio8 {
 
     public static void main(String[] args) {
         // Arreglo original de entrada
-        String[] arreglo = {"arroz","leche","sal","plato","condimentos","agua"};
-        // Posición del elemento a eliminar (índice 2)
+        String[] arreglo = {"arroz","cebolla","sal","plato","condimentos","agua"};
+        // Posición del elemento a eliminar
         int posicionEliminar = 3;
 
         // Llamar al método para eliminar el elemento
