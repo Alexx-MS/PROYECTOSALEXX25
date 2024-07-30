@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.Scanner;
 
 public class Main {
@@ -30,21 +29,17 @@ public class Main {
             // Ejecutar la operación según la opción seleccionada
             switch (opcion) {
                 case 1:
-                    resultado = num1 + num2;
-                    System.out.println("El resultado de la suma es: " + resultado);
+                    System.out.println("El resultado de la suma es: "+sumar(num1,num2) );
                     break;
                 case 2:
-                    resultado = num1 - num2;
-                    System.out.println("El resultado de la resta es: " + resultado);
+                    System.out.println("El resultado de la resta es: "+restar(num1,num2) );
                     break;
                 case 3:
-                    resultado = num1 * num2;
-                    System.out.println("El resultado de la multiplicación es: " + resultado);
+                    System.out.println("El resultado de la multiplicación es: "+multip(num1,num2) );
                     break;
                 case 4:
                     if (num2 != 0) {
-                        resultado = num1 / num2;
-                        System.out.println("El resultado de la división es: " + resultado);
+                        System.out.println("El resultado de la división es: " +dividir(num1,num2) );
                     } else {
                         System.out.println("Error: División por cero.");
                     }
@@ -65,17 +60,25 @@ public class Main {
 
         System.out.println("Gracias por usar la calculadora.");
     }
+    public static double sumar(double numero1,double numero2){
+       double suma = numero1 + numero2;
+        return suma;
+    }
+    public static double restar(double numero1,double numero2){
+       double resta = numero1 - numero2;
+        return resta;
+    }
+    public static double multip(double numero1,double numero2) {
+        double producto = numero1 - numero2;
+        return producto;
+    }
+    public static double dividir(double numero1, double numero2){
+        double division = numero1 / numero2;
+        return division;
+    }
 }
 
 
 
 
 
-
-
-
-
-
-
-=======
->>>>>>> 8b13e10b1a5ed576617539c9685b4ffb3be3efd0

@@ -3,22 +3,19 @@ import java.util.Scanner;
 
 public class Siuuuu {
     public static void main(String[] args) {
-        {
-            // Crear un objeto Scanner para leer la entrada desde la consola
-            Scanner scanner = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList();
 
-            // Solicitar al usuario que ingrese una línea de texto
-            System.out.print("Ingrese una línea de texto: ");
 
-            // Leer la línea completa ingresada por el usuario
-            String userInput = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
 
-            // Mostrar la entrada del usuario
-            System.out.println("Has ingresado: " + userInput);
+        System.out.print("Ingrese una línea de texto: ");
 
-            // Cerrar el scanner
-            scanner.close();
-        }
+        String userInput = scanner.nextLine();
+
+        System.out.println("Has ingresado: " + userInput);
+
+        scanner.close();
     }
 
 }
+
