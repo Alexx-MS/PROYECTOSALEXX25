@@ -7,26 +7,21 @@ public class Main {
         String continuar;
 
         do {
-            // Mostrar el menú de operaciones
             System.out.println("Selecciona una operación:");
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
             System.out.println("4. Dividir");
 
-            // Leer la opción del usuario
             int opcion = scanner.nextInt();
 
-            // Leer los números para operar
             System.out.print("Introduce el primer número: ");
             double num1 = scanner.nextDouble();
             System.out.print("Introduce el segundo número: ");
             double num2 = scanner.nextDouble();
 
-            // Variable para almacenar el resultado
             double resultado = 0;
 
-            // Ejecutar la operación según la opción seleccionada
             switch (opcion) {
                 case 1:
                     System.out.println("El resultado de la suma es: "+sumar(num1,num2) );

@@ -13,13 +13,11 @@ public class CalculadoraEjercicio {
                 "3.multiplicar\n" +
                 "4.dividir\n" +
                 "5.salir");
-        opcion = scanner.nextInt();
+         opcion = scanner.nextInt();
         System.out.println("Ingresa el primer numero");
         numero1 = scanner.nextDouble();
         System.out.println("Ingresa el segundo numero");
         numero2 = scanner.nextDouble();
-
-
 
 
         switch (opcion) {
