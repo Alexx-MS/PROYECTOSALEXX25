@@ -1,24 +1,16 @@
 import java.util.Scanner;
 
 public class CalculadoraEjercicio {
+    public static   Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         double numero1, numero2;
         int opcion;
-
-        System.out.println("*** menu ***");
-        System.out.println("¡Hola!, Bienvenido a nuestra calculadora ¿que deseas hacer hoy?  ");
-        System.out.println("1.sumar\n" +
-                "2.restar\n" +
-                "3.multiplicar\n" +
-                "4.dividir\n" +
-                "5.salir");
-         opcion = scanner.nextInt();
+        mostrarMenu();
+        opcion = scanner.nextInt();
         System.out.println("Ingresa el primer numero");
         numero1 = scanner.nextDouble();
         System.out.println("Ingresa el segundo numero");
         numero2 = scanner.nextDouble();
-
 
         switch (opcion) {
             case 1:
@@ -41,6 +33,9 @@ public class CalculadoraEjercicio {
                 }
                 break;
             case 5:
+                System.out.println();
+                break;
+            case 6:
                 System.out.println("Gracias por usar nuestra calculadora :)");
                 break;
             default:
@@ -69,5 +64,40 @@ public class CalculadoraEjercicio {
        double division = numero1 / numero2;
        return division;
 
+    }
+    public static void mostrarMenu(){
+        System.out.println("*** MENU >-< ***");
+        System.out.println("¡Hola!, Bienvenido a nuestra calculadora ¿que deseas hacer hoy?  ");
+        System.out.println("1.Sumar\n" +
+                "2.Restar\n" +
+                "3.Multiplicar\n" +
+                "4.Dividir\n" +
+                "5.Saber si dos numero es amigo/n" +
+                "6.Salir");
+
+    }
+    public static int sumaDivisores(int numero) {
+        int suma = 0;
+        for (int i = 1; i < numero; i++) {
+            if (numero % i == 0) {
+                suma += i;
+            }
+        }
+        return suma;
+    }
+
+
+    public static boolean sonAmigos(int num1, int num2) {
+        return sumaDivisores(num1) == num2 && sumaDivisores(num2) == num1;
+    }
+
+    public static void imprimirResultado(int num1, int num2) {
+        if (sonAmigos(num1, num2)) {
+            System.out.println(num1 + " y " + num2 + " son números amigos.");
+        } else {
+            System.out.println(num1 + " y " + num2 + " no son números amigos.");
+        }
+
+        scanner.close();
     }
 }
