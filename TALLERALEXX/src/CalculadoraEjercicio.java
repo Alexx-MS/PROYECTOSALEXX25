@@ -92,6 +92,7 @@ public class CalculadoraEjercicio {
     }
 
     public static void imprimirResultado(int num1, int num2) {
+        System.out.println(sonAmigos(num1, num2));
         if (sonAmigos(num1, num2)) {
             System.out.println(num1 + " y " + num2 + " son números amigos.");
         } else {
