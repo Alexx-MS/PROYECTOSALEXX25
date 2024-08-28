@@ -11,7 +11,7 @@ public class Main1 {
         while (true) {
             mostrarMenu();
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer del scanner
+            scanner.nextLine();
             switch (opcion) {
                 case 1:
                     agregarProducto();
@@ -27,7 +27,7 @@ public class Main1 {
                     break;
                 case 5:
                     System.out.println("¡Gracias por usar el programa! ¡Hasta luego!");
-                    return; // Salir del programa
+                    return;
                 default:
                     System.out.println("Opción no válida, por favor intente de nuevo.");
             }
@@ -49,7 +49,7 @@ public class Main1 {
         String nombre = scanner.nextLine();
         System.out.print("Ingrese el precio del producto: ");
         double precio = scanner.nextDouble();
-        scanner.nextLine(); // Limpiar el buffer del scanner
+        scanner.nextLine();
         String producto = nombre + " - $" + precio;
         productosDisponibles.add(producto);
         System.out.println("Producto añadido exitosamente.");
