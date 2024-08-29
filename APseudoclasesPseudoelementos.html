@@ -51,6 +51,28 @@ p::first-letter {
   font-size: 200%;
   color: blue;
 }
+/* Estilo para enlaces no visitados */
+a {
+    color: blue; /* Color para enlaces no visitados */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease; /* Efecto de transición suave para el color */
+}
+
+/* Estilo para enlaces visitados */
+a:visited {
+    color: purple; /* Color para enlaces visitados */
+}
+
+/* Estilo para enlaces al pasar el cursor sobre ellos */
+a:hover {
+    color: red; /* Color cuando el cursor está sobre el enlace */
+}
+
+/* Estilo para enlaces cuando se hace clic en ellos */
+a:active {
+    color: orange; /* Color cuando el enlace está siendo clickeado */
+}
+
 
      </Style>
 
