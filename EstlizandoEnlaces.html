@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilizando Enlaces</title>
     <style>
+        a:link {
+            color: blue;
+            text-decoration: none;
+            transition: color 0.3s ease; /
+        }
         a:visited {
-            color: purple;
+            color: purple; 
         }
         a:hover {
             color: #1abc9c;
             cursor: pointer;
         }
+        a:active {
+            color: #16a085;
+        }
+
         .imagen_vaquita {
             width: 400px; 
             height: auto; 
         }
-        button:active {
-             background-color: yellow;
-        }
-        
     </style>
 </head>
 <body>

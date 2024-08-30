@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Pseudoelementos</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        ul li {
+            margin-bottom: 10px; 
+        }
+        ul li::before {
+            content: '★';
+            color: blue; 
+            margin-right: 8px;
+        }
+        ul li::after {
+            content: ' →'; 
+            color: red; 
+        }
+        ol {
+            margin-top: 20px; 
+        }
+        ol li::before {
+            content: counter(list-item) '. ';
+            color: green; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Listas con Pseudoelementos</h1>
+
+    <h2>Lista Desordenada</h2>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <h2>Lista Ordenada</h2>
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+</body>
+</html>

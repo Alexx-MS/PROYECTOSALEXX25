@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Efectos de Desplazamiento</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /*estilizo para el menu */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+            position: relative;
+        }
+        /* Resaltado del elemento activo en el menú */
+        nav ul li a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        /* Cambiar el estilo cuando un enlace está enfocado */
+        nav ul li a:focus {
+            outline: 2px solid yellow;
+            outline-offset: 4px;
+        }
+        /* Indicador de progreso */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4caf50;
+            transition: width 0.2s ease;
+        }
+        /* Estilo para el elemento al que se le aplica el indicador de progreso */
+        .section {
+            padding: 50px;
+            min-height: 100vh;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1" class="active">Sección 1</a></li>
+            <li><a href="#section2">Sección 2</a></li>
+            <li><a href="#section3">Sección 3</a></li>
+        </ul>
+    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div id="section1" class="section">
+        <h1>Sección 1</h1>
+        <p>Contenido de la primera sección EL BICHOOO.</p>
+    </div>
+    <div id="section2" class="section">
+        <h1>Sección 2</h1>
+        <p>Contenido de la segunda sección SIUUUUU 😎.</p>
+    </div>
+    <div id="section3" class="section">
+        <h1>Sección 3</h1>
+        <p>Contenido de la tercera sección CR7 FOREVER 👌👌.</p>
+    </div>
+</body>
+</html>

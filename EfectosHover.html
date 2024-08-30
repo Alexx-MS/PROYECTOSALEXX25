@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos Hover</title>
+    <style>
+        .button {
+            background-color: #3498db; 
+            color: white;
+            border: color(srgb red green blue);
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2980b9; 
+        }
+        .image {
+            transition: transform 0.3s ease;
+        }
+        .image:hover {
+            transform: scale(1.1);
+        }
+        .background-change {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+        .background-change:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Efectos de Hover</h1>
+    
+    <button class="button">Hover sobre mis vacaassss</button>
+    
+    <div class="background-change">
+        aqui cambio el fondo XD 😎
+    </div>
+    
+    <figure>
+        <img src="Vaquitas tamaño mediano.jpg" alt="imagen vacas" class="image">
+        <figcaption>Imagen de Vacas</figcaption>
+    </figure>
+</body>
+</html>
