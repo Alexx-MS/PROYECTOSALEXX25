@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class JueguitoJugadores2 {
+public class JueguitoJugadoresObstaculos2 {
 
     public static class Obstaculo {
         private String description;
