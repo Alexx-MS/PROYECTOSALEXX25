@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class JuegoTiradores {
+public class JuegoTirador {
 
     class Jugador {
         private int salud;
@@ -61,10 +61,9 @@ public class JuegoTiradores {
         }
     }
     public static void main(String[] args) {
-        JuegoTiradores juego = new JuegoTiradores();
+        JuegoTirador juego = new JuegoTirador();
         Jugador jugador1 = juego.new Jugador(1000,500);
         Jugador jugador2 = juego.new Jugador(1000,500);
-
         juego.iniciarPelea(jugador1, jugador2);
     }
 }
