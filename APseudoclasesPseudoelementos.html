@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDOCLASES Y PSEUDOELEMENTOS</title>
+     <Style>
+       /* Pseudoclases */
+
+/* Cambia el color del enlace cuando el cursor está sobre él */
+a:hover {
+  color: red;
+}
+
+/* Cambia el fondo del botón mientras está siendo clickeado */
+button:active {
+  background-color: yellow;
+}
+
+/* Cambia el borde del campo de entrada cuando tiene el foco */
+input:focus {
+  border-color: blue;
+}
+
+/* Cambia el color del segundo elemento de una lista */
+li:nth-child(2) {
+  color: green;
+}
+
+/* Pseudoelementos */
+
+/* Inserta contenido antes del contenido real de los párrafos */
+p::before {
+  content: "Nota: ";
+  font-weight: bold;
+}
+
+/* Inserta contenido después del contenido real de los párrafos */
+p::after {
+  content: " (fin del párrafo)";
+  font-style: italic;
+}
+
+/* Aplica estilo a la primera línea de los párrafos */
+p::first-line {
+  font-weight: bold;
+}
+
+/* Aplica estilo a la primera letra de los párrafos */
+p::first-letter {
+  font-size: 200%;
+  color: blue;
+}
+/* Estilo para enlaces no visitados */
+a {
+    color: blue; /* Color para enlaces no visitados */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease; /* Efecto de transición suave para el color */
+}
+
+/* Estilo para enlaces visitados */
+a:visited {
+    color: purple; /* Color para enlaces visitados */
+}
+
+/* Estilo para enlaces al pasar el cursor sobre ellos */
+a:hover {
+    color: red; /* Color cuando el cursor está sobre el enlace */
+}
+
+/* Estilo para enlaces cuando se hace clic en ellos */
+a:active {
+    color: orange; /* Color cuando el enlace está siendo clickeado */
+}
+
+
+     </Style>
+
+</head>
+<body>
+
+</body>
+</html>
