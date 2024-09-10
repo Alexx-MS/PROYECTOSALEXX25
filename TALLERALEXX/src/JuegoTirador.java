@@ -29,6 +29,10 @@ public class JuegoTirador {
         public int getSpecialSkill() {
             return specialSkill;
         }
+        public  int escudoProtector (int daño) {
+            int escudo = daño;
+            return escudo;
+        }
     }
     public void iniciarPelea(Jugador jugador1, Jugador jugador2) {
         while (jugador1.getSalud() > 0 && jugador2.getSalud() > 0) {
@@ -36,6 +40,10 @@ public class JuegoTirador {
             jugador2.recibirDaño(daño1);
             System.out.println("🤜🎇🤛 Jugador 1 ha atacado a Jugador 2 con " + daño1 + " de daño 🤜🎇🤛 . ⛑  Salud de Jugador 2 ⛑ : " + jugador2.getSalud());
 
+            if(daño1 > 20 && daño1 <= 30){
+                jugador2.escudoProtector(daño1);
+                System.out.println("¡el jugador 2 a obtenido el escudo protector!.  🛡️ El jugador ha bloqueado  🛡️ : "+ daño1 + " de daño. ⛑️ Salud de jugador 2 ⛑️ : "+ jugador2.getSalud() +"");
+            }
             if (jugador1.getSalud() <= 100 && daño1 <= 20 ){
                 System.out.println(" 💀  El jugador 1 obtenido la habilidad especial su daño automatico es : " + jugador1.getSpecialSkill() + " 💀");
                 jugador2.recibirDaño(jugador1.getSpecialSkill());
@@ -50,6 +58,11 @@ public class JuegoTirador {
             jugador1.recibirDaño(daño2);
             System.out.println("🤜🎇🤛 Jugador 2 ha atacado a Jugador 1 con " + daño2 + " de daño  🤜🎇🤛 . ⛑ Salud de Jugador 1 ⛑ : " + jugador1.getSalud());
 
+            if(daño2 > 20 && daño2 <= 30){
+                jugador1.escudoProtector(daño2);
+                System.out.println("¡el jugador 1 a obtenido el escudo protector!. 🛡️ El jugador ha bloqueado : "+ daño1 + " de daño 🛡️ . ️⛑️ Salud de jugador 2 ️⛑️ : "+ jugador2.getSalud() +"");
+            }
+
             if (jugador2.getSalud() <= 100 && daño2 <= 20 ){
                 System.out.println(" 💀  El jugador 2 obtenido la habilidad especial su daño automatico es : " + jugador2.getSpecialSkill() + " 💀");
                 jugador1.recibirDaño(jugador2.getSpecialSkill());
@@ -59,6 +72,7 @@ public class JuegoTirador {
                 System.out.println(" ☠ Jugador 1 ha sido Eliminado ☠ . 🏆 ¡Jugador 2 gana! 🏆 ");
             }
         }
+
     }
     public static void main(String[] args) {
         JuegoTirador juego = new JuegoTirador();
