@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID ANIDADO</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .grid-itemcelda2 {
+        display: grid;
+        grid-template-columns:  150px 150px; 
+        grid-template-rows: 50px 50px 50px;    
+        gap: 1px;                               
+        background-color:  yellow; 
+        
+    }
+    .itemcelda2{
+        border: 2px solid black;
+    }
+    .Grid-Anidado {
+        
+        grid-template-columns: 25px 25px;
+        grid-template-rows: 25px 25px;
+        border: 2px solid green;
+    }
+    .listas-Anidadas {
+        display: inline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="grid-itemcelda2">
+        <div class="itemcelda2">Celda 1</div>
+        <div class="itemcelda2">Celda 2</div>
+        <div class="itemcelda2">Celda 3</div>
+        <div class="Grid-Anidado"> Grid Anidado
+            <div class="listas-Anidadas" >Lista 1</div>
+            <div class="listas-Anidadas" >Lista 2</div>
+            <div class="listas-Anidadas" >Lista 3</div>
+            <div class="listas-Anidadas" >Lista 4</div>
+        </div>
+        <div class="itemcelda2">Celda 5</div>
+    </div>
+</body>
+</html>

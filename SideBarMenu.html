@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDEBAR MENUU</title>
+    <style>
+ body ul {
+    margin: 0;
+    padding: 0;
+}
+.contenedorxd {
+    display: flex;
+    height: 100vh;
+}
+.sidebarderecha {
+    flex: 1; 
+    background-color:  white;
+    padding: 20px;
+    background-color:  lightblue; 
+}
+.menu {
+    list-style: none;
+}
+.menu li {
+    border-bottom: 1px solid #ccc; 
+    padding: 10px 0;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+.content {
+    flex: 8; 
+    padding: 20px;
+    background-color: pink; 
+}
+    </style>
+    
+</head>
+<body>
+    <div class="contenedorxd">
+        <aside class="sidebarderecha">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Opciones</a></li>
+                <li><a href="#">Planes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Bienvenido a la Pagina</h1>
+            <p>Este es el contenido principal de la pagina.</p>
+        </main>
+    </div>
+</body>
+</html>

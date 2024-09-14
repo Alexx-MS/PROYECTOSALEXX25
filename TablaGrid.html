@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLA CON GRID</title>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .grid-itemCelda {
+        display: grid;
+        grid-template-columns:  100px 100px 100px; 
+        grid-template-rows: 50px 50px 50px;    
+        gap: 1px;                               
+        background-color:  yellow;          
+    }
+    
+    .itemCelda {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;               
+        border: 1px solid #ccc;               
+        font-size: 16px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="grid-itemCelda">
+        <div class="itemCelda">Celda 1</div>
+        <div class="itemCelda">Celda 2</div>
+        <div class="itemCelda">Celda 3</div>
+        <div class="itemCelda">Celda 4</div>
+        <div class="itemCelda">Celda 5</div>
+        <div class="itemCelda">Celda 6</div>
+        <div class="itemCelda">Celda 7</div>
+        <div class="itemCelda">Celda 8</div>
+        <div class="itemCelda">Celda 9</div>
+    </div>
+</body>
+</html>
