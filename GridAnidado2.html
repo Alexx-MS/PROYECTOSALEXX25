@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID ANIDADO</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+    .grid-itemcelda2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Primera columna es la mitad del ancho de la segunda */
+        grid-template-rows: auto 1fr 1fr; /* Primera fila para el título, dos filas para contenido */
+        gap: 1px;
+        background-color: yellow;
+        margin: 0;
+        border: 2px solid black; /* Borde alrededor de la cuadrícula principal */
+    }
+
+    .itemcelda2 {
+        border: 2px solid black;
+        margin: 0;
+    }
+
+    .titulo {
+        grid-column: 1 / -1; /* Ocupa toda la fila */
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        border-bottom: 2px solid black; /* Línea divisoria debajo del título */
+    }
+
+    .contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dos columnas del mismo ancho */
+        grid-template-rows: auto; /* Fila para la cabecera */
+        gap: 1px;
+        border: 2px solid green; /* Borde alrededor de la cuadrícula anidada */
+        padding: 5px;
+        box-sizing: border-box;
+        grid-column: 1 / 2; /* Ocupa la celda 4 en la cuadrícula principal */
+        grid-row: 2 / 4; /* Ocupa dos filas */
+        margin: auto; /* Centra la cuadrícula anidada en su celda */
+        width: 100%; /* Asegura que la cuadrícula anidada use todo el ancho disponible en su celda */
+        height: 100%; /* Asegura que la cuadrícula anidada use todo el alto disponible en su celda */
+    }
+
+    .cabecera {
+        grid-column: 1 / -1; /* Ocupa ambas columnas */
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid black; /* Línea divisoria debajo de la cabecera */
+        padding: 5px;
+    }
+
+    .listas-Anidadas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red; /* Añadido para visualizar mejor el contenedor */
+        background-color: white;
+        padding: 5px;
+    }
+
+    .lista-1 { grid-column: 1 / 2; }
+    .lista-2 { grid-column: 2 / 3; }
+    </style>
+</head>
+<body>
+    <div class="grid-itemcelda2">
+        <div class="itemcelda2">Celda 1</div>
+        <div class="itemcelda2">Celda 2</div>
+        <div class="itemcelda2">Celda 3</div>
+        <div class="contenido">
+            <div class="cabecera">Cabecera</div>
+            <div class="listas-Anidadas lista-1">Lista 1</div>
+            <div class="listas-Anidadas lista-2">Lista 2</div>
+        </div>
+        <div class="itemcelda2">Celda 5</div>
+    </div>
+</body>
+</html>

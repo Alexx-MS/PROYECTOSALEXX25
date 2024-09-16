@@ -13,30 +13,53 @@
         margin: 0;
         background-color: #f0f0f0;
     }
+
     .grid-itemcelda2 {
         display: grid;
-        grid-template-columns:  150px 150px; 
+        grid-template-columns: 150px 150px; 
         grid-template-rows: 50px 50px 50px;    
         gap: 1px;                               
-        background-color:  yellow; 
-        
+        background-color: yellow; 
+        margin: 0;
     }
-    .itemcelda2{
+
+    .itemcelda2 {
         border: 2px solid black;
+        margin: 0;
     }
+
     .Grid-Anidado {
-        
-        grid-template-columns: 25px 25px;
-        grid-template-rows: 25px 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas del mismo tamaño */
+        grid-template-rows: auto 1fr 1fr;       /* Primera fila automática (para el título), luego dos filas de tamaño flexible */
         border: 2px solid green;
+        gap: 1px;                             /* Espacio entre las celdas de la cuadrícula */
+        padding: 5px;                         /* Espacio interno del contenedor */
+        box-sizing: border-box;               /* Incluye el borde y el padding en el tamaño total del contenedor */
+        height: 101px;                         /* Asegura que el grid tome el espacio completo disponible */
     }
+
+    .titulo {
+        grid-column: 1 / -1; /* Ocupa toda la fila */
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        border-bottom: 2px solid black; /* Línea divisoria debajo del título */
+    }
+
     .listas-Anidadas {
-        display: inline;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        border: 1px solid red;                /* Añadido para visualizar mejor el contenedor */
+        background-color: white;              /* Color de fondo para contraste */
+        box-sizing: border-box;
     }
+
+    .lista-1 { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .lista-2 { grid-column: 2 / 3; grid-row: 2 / 3; }
+    .lista-3 { grid-column: 1 / 2; grid-row: 3 / 4; }
+    .lista-4 { grid-column: 2 / 3; grid-row: 3 / 4; }
     </style>
 </head>
 <body>
@@ -44,11 +67,12 @@
         <div class="itemcelda2">Celda 1</div>
         <div class="itemcelda2">Celda 2</div>
         <div class="itemcelda2">Celda 3</div>
-        <div class="Grid-Anidado"> Grid Anidado
-            <div class="listas-Anidadas" >Lista 1</div>
-            <div class="listas-Anidadas" >Lista 2</div>
-            <div class="listas-Anidadas" >Lista 3</div>
-            <div class="listas-Anidadas" >Lista 4</div>
+        <div class="Grid-Anidado"> 
+            <div class="titulo">Grid Anidado</div>
+            <div class="listas-Anidadas lista-1">Lista 1</div>
+            <div class="listas-Anidadas lista-2">Lista 2</div>
+            <div class="listas-Anidadas lista-3">Lista 3</div>
+            <div class="listas-Anidadas lista-4">Lista 4</div>
         </div>
         <div class="itemcelda2">Celda 5</div>
     </div>
