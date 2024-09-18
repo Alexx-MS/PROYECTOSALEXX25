@@ -19,7 +19,7 @@ class Carta {
 
 public class JuegoCartas2 {
 
-    static final String[] ELEMENTOS = {"Fuego", "Viento", "Rayo", "Tierra", "Agua"};
+    static final String[] ELEMENTOS = {"🔥FUEGO🔥", "🍃VIENTO🍃", "🌩️RAYO🌩️", "🌍TIERRA🌍", "💧AGUA💧"};
     static final Random random = new Random();
 
     public static void main(String[] args)
@@ -93,14 +93,14 @@ public class JuegoCartas2 {
         ataque += dadoAtacante;
         defensa += dadoDefensor;
 
-        System.out.println("Ataque final del atacante: " + ataque);
-        System.out.println("Defensa final del defensor: " + defensa);
+        System.out.println(" ⚔️😈 Ataque final del atacante 😈⚔️ ️ : " + ataque);
+        System.out.println(" 🛡️ Defensa final del defensor 🛡️ : " + defensa);
 
         if (ataque > defensa) {
-            System.out.println("¡El atacante gana el turno!");
+            System.out.println(" ⚔️😈 ¡El atacante gana el turno!  😈⚔️ ");
             defensor.remove(cartaDefensor);
         } else {
-            System.out.println("¡El defensor gana el turno!");
+            System.out.println(" 🛡️ ¡El defensor gana el turno! 🛡️ ");
             atacante.remove(cartaAtacante);
         }
     }
@@ -119,7 +119,7 @@ public class JuegoCartas2 {
     private static void mostrarCartas(ArrayList<Carta> mazo) {
         for (int i = 0; i < mazo.size(); i++) {
             Carta carta = mazo.get(i);
-            System.out.println((i + 1) + ": ATK: " + carta.atk + ", DEF: " + carta.def + ", Elemento: " + carta.elemento);
+            System.out.println((i + 1) + ": ⚔️ ATK ⚔️ : " + carta.atk + ", 🛡️ DEF 🛡️ : " + carta.def + ", Elemento: " + carta.elemento);
         }
     }
 
