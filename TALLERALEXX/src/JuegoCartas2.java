@@ -6,9 +6,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Carta {
-    int atk;
-    int def;
-    String elemento;
+   int atk;
+   int def;
+   String elemento;
 
     public Carta(int atk, int def, String elemento) {
         this.atk = atk;
@@ -119,7 +119,7 @@ public class JuegoCartas2 {
     private static void mostrarCartas(ArrayList<Carta> mazo) {
         for (int i = 0; i < mazo.size(); i++) {
             Carta carta = mazo.get(i);
-            System.out.println((i + 1) + ": ⚔️ ATK ⚔️ : " + carta.atk + ", 🛡️ DEF 🛡️ : " + carta.def + ", Elemento: " + carta.elemento);
+            System.out.println((i + 1) + ": ⚔️ ATTACK ⚔️ : " + carta.atk + ", 🛡️ DEFENSE 🛡️ : " + carta.def + ", Elemento: " + carta.elemento);
         }
     }
 
