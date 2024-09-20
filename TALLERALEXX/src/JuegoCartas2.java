@@ -49,14 +49,14 @@ public class JuegoCartas2 {
 
         while (!mazoJugador1.isEmpty() && !mazoJugador2.isEmpty()) {
             if (jugador1Inicia) {
-                jugarTurno(scanner, mazoJugador1, mazoJugador2);
+                jugarPorTurno(scanner, mazoJugador1, mazoJugador2);
                 if (mazoJugador2.isEmpty()) {
                     System.out.println("¡Jugador 1 gana!");
                     break;
                 }
                 jugador1Inicia = false;
             } else {
-                jugarTurno(scanner, mazoJugador2, mazoJugador1);
+                jugarPorTurno(scanner, mazoJugador2, mazoJugador1);
                 if (mazoJugador1.isEmpty()) {
                     System.out.println("¡Jugador 2 gana!");
                     break;
@@ -68,7 +68,7 @@ public class JuegoCartas2 {
         scanner.close();
     }
 
-    private static void jugarTurno(Scanner scanner, ArrayList<Carta> atacante, ArrayList<Carta> defensor) {
+    private static void jugarPorTurno(Scanner scanner, ArrayList<Carta> atacante, ArrayList<Carta> defensor) {
         System.out.println("Elige una carta para atacar:");
         mostrarCartas(atacante);
         int cartaAtacanteIdx = obtenerIndiceCarta(scanner, atacante);
@@ -83,7 +83,7 @@ public class JuegoCartas2 {
         int ataque = cartaAtacante.atk;
         int defensa = cartaDefensor.def;
 
-        if (elementoMasFuerte(cartaAtacante.elemento, cartaDefensor.elemento)) {
+        if (comprobarElementoMasFuerte(cartaAtacante.elemento, cartaDefensor.elemento)) {
             ataque += ataque * 0.20;
             defensa -= defensa * 0.30;
         }
@@ -105,7 +105,14 @@ public class JuegoCartas2 {
         }
     }
 
-    private static boolean elementoMasFuerte(String elementoAtacante, String elementoDefensor) {
+    private static void mostrarCartas(ArrayList<Carta> mazo) {
+        for (int i = 0; i < mazo.size(); i++) {
+            Carta carta = mazo.get(i);
+            System.out.println((i + 1) + ": ⚔️ ATTACK ⚔️ : " + carta.atk + ", 🛡️ DEFENSE 🛡️ : " + carta.def + ", Elemento: " + carta.elemento);
+        }
+    }
+
+    private static boolean comprobarElementoMasFuerte(String elementoAtacante, String elementoDefensor) {
         Map<String, String> fortalezas = new HashMap<>();
         fortalezas.put("Fuego", "Agua");
         fortalezas.put("Viento", "Tierra");
@@ -115,14 +122,6 @@ public class JuegoCartas2 {
 
         return fortalezas.getOrDefault(elementoAtacante, "").equals(elementoDefensor);
     }
-
-    private static void mostrarCartas(ArrayList<Carta> mazo) {
-        for (int i = 0; i < mazo.size(); i++) {
-            Carta carta = mazo.get(i);
-            System.out.println((i + 1) + ": ⚔️ ATTACK ⚔️ : " + carta.atk + ", 🛡️ DEFENSE 🛡️ : " + carta.def + ", Elemento: " + carta.elemento);
-        }
-    }
-
     private static int obtenerIndiceCarta(Scanner scanner, ArrayList<Carta> mazo) {
         int idx;
         while (true) {

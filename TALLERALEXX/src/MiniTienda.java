@@ -39,25 +39,30 @@ public class MiniTienda {
         System.out.println("Ingresa la cantidad del producto: "+nombre );
         int cantidad = scanner.nextInt();
         scanner.nextLine();
-        listaProductos.add(new Producto(nombre,precio, cantidad));
+        listaProductos.add(new Producto(nombre,precio,cantidad));
         System.out.println("El Producto:"+nombre+" ha sido agregado");
     }
 
     public static void main(String[] args) {
         MiniTienda tienda = new MiniTienda();
         int opcion;
-        tienda.mostrarMenu();
-        opcion = scanner.nextInt(); // antes de procesar una opcion(despuesd de usar un scanner de tipo int )
-        // limpiar el buffer sino el cree que esa opcion ya esta y la salta.
-        scanner.nextLine();
-        switch (opcion) {
-            case 1:
-                tienda.agregarNuevoProducto();
-                break;
-            case 2:
-                tienda.mostrarProductosAgregados();
-                break;
-        }
+        do {
+            tienda.mostrarMenu();
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+            switch (opcion) {
+                case 1:
+                    tienda.agregarNuevoProducto();
+                    break;
+                case 2:
+                    tienda.mostrarProductosAgregados();
+                    break;
+                default:
+                    if (opcion != 0) {
+                        System.out.println("Opción no válida. Inténtalo de nuevo.");
+                    }
+            }
+        } while (opcion != 0);
 
     }
     public static void mostrarMenu (){
@@ -71,7 +76,6 @@ public class MiniTienda {
             System.out.println("No hay productos agregados.");
             return;
         }
-        
         System.out.println("Lista de productos agregados:");
         for (Producto aux : listaProductos) {
             System.out.println(aux);

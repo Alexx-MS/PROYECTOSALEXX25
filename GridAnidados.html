@@ -30,30 +30,30 @@
 
     .Grid-Anidado {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas del mismo tamaño */
-        grid-template-rows: auto 1fr 1fr;       /* Primera fila automática (para el título), luego dos filas de tamaño flexible */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr 1fr;
         border: 2px solid green;
-        gap: 1px;                             /* Espacio entre las celdas de la cuadrícula */
-        padding: 5px;                         /* Espacio interno del contenedor */
-        box-sizing: border-box;               /* Incluye el borde y el padding en el tamaño total del contenedor */
+        gap: 1px;
+        padding: 5px;
+        box-sizing: border-box;
         height: 101px;
-                         /* Asegura que el grid tome el espacio completo disponible */
+
     }
 
     .titulo {
-        grid-column: 1 / -1; /* Ocupa toda la fila */
+        grid-column: 1 / -1;
         text-align: center;
         font-weight: bold;
         padding: 5px;
-        border-bottom: 2px solid black; /* Línea divisoria debajo del título */
+        border-bottom: 2px solid black;
     }
 
     .listas-Anidadas {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid red;                /* Añadido para visualizar mejor el contenedor */
-        background-color: white;              /* Color de fondo para contraste */
+        border: 1px solid red;
+        background-color: white;
         box-sizing: border-box;
     }
 
