@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="#contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section id="inicio">
+            <article>
+                <h2>Introducción</h2>
+                <img src="imagen-html-css.jpg" alt="imagen de html">
+                <p>Esta es una página de ejemplo diseñada para practicar HTML,CSS y JavaScript.</p>
+            </article>
+        </section>
+
+        <section id="acerca">
+            <h2>Lista de Tareas</h2>
+            <ol>
+                <li>Aprender HTML.</li>
+                <li>Aprender CSS.</li>
+                <li>Construir proyectos básicos.</li>
+                <li>Aprender JavaScript</li>
+            </ol>
+        </section>
+    </main>
+
+   
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="#">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+  
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
