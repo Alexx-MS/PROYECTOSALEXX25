@@ -1,4 +1,4 @@
-/* Estilos para la seccion "Acerca de"*/ 
+
 header {
     background-color:  #5DADE2;
     color: white;
@@ -26,12 +26,13 @@ nav ul li a:hover {
     
 }
 
-/*estilos*/
+
 .about {
     text-align: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 800px;
+    background-color: antiquewhite;
 }
 
 .about h2 {
@@ -86,7 +87,7 @@ nav ul li a:hover {
     letter-spacing: 2px;
 }
 
-/* Pie de Pagina */
+
 footer {
     background-color: #333;
     color: white;

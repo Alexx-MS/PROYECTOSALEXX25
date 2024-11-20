@@ -1,4 +1,4 @@
-/* Estilos básicos */
+/* Estilos basicos */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 }
 
-/* Encabezado y Navegación */
+/* Encabezado y Navegacion */
 header {
     background-color:  #5DADE2;
     color: white;
@@ -83,7 +83,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Pie de Página */
+/* Pie de Pagina */
 footer {
     background-color: #333;
     color: white;
